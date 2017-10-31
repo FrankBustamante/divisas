@@ -1,0 +1,42 @@
+<%= form_with(model: divisa, local: true) do |form| %>
+  <% if divisa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(divisa.errors.count, "error") %> prohibited this divisa from being saved:</h2>
+
+      <ul>
+      <% divisa.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :año %>
+    <%= form.text_field :año, id: :divisa_año %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mes %>
+    <%= form.text_field :mes, id: :divisa_mes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dia %>
+    <%= form.text_field :dia, id: :divisa_dia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :valor %>
+    <%= form.text_field :valor, id: :divisa_valor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo %>
+    <%= form.text_field :tipo, id: :divisa_tipo %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

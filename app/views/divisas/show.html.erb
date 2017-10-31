@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Año:</strong>
+  <%= @divisa.año %>
+</p>
+
+<p>
+  <strong>Mes:</strong>
+  <%= @divisa.mes %>
+</p>
+
+<p>
+  <strong>Dia:</strong>
+  <%= @divisa.dia %>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @divisa.valor %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @divisa.tipo %>
+</p>
+
+<%= link_to 'Edit', edit_divisa_path(@divisa) %> |
+<%= link_to 'Back', divisas_path %>
